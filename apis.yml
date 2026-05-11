@@ -1,0 +1,57 @@
+aid: airbrake
+name: Airbrake
+description: >-
+  Airbrake is an error monitoring and application performance management
+  platform that captures exceptions, deployments, and performance traces
+  across web, mobile, and backend applications using language-specific
+  notifier libraries. The platform aggregates errors with smart grouping,
+  routing alerts to engineering teams, and provides deploy tracking and
+  source map management for stack trace deminification. The Airbrake REST
+  API exposes error notices, projects, deployments, and groups using query
+  parameter API keys.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Error Monitoring
+  - Application Performance Monitoring
+  - Observability
+  - DevOps
+  - Logging
+  - Exception Tracking
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/airbrake/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: airbrake:api
+    name: Airbrake API
+    description: >-
+      REST API for submitting error notices, managing projects, tracking
+      deployments, querying notices and groups, and uploading source maps.
+      Authentication uses project keys, user keys, or time-limited user tokens
+      passed as a query parameter.
+    humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+    baseURL: https://api.airbrake.io/api/v4
+    tags:
+      - Errors
+      - Notices
+      - Deployments
+      - Projects
+      - Source Maps
+    properties:
+      - type: Documentation
+        url: https://docs.airbrake.io/docs/devops-tools/api/
+
+common:
+  - type: Website
+    url: https://www.airbrake.io
+  - type: Documentation
+    url: https://docs.airbrake.io
+  - type: Pricing
+    url: https://www.airbrake.io/pricing
+  - type: Sign Up
+    url: https://airbrake.io/account/new
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
