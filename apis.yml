@@ -44,6 +44,10 @@ apis:
         url: https://docs.airbrake.io/docs/devops-tools/api/
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/airbrake
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/airbrake-io
   - type: Website
     url: https://www.airbrake.io
   - type: Documentation
