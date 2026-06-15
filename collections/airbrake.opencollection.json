@@ -1,0 +1,605 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbrake REST API",
+    "version": "v4"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sessions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create user token (login)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v4/sessions"
+          },
+          "docs": "Create user token (login)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects"
+          },
+          "docs": "List projects"
+        },
+        {
+          "info": {
+            "name": "Show project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show project"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Deploys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List deploys",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/deploys",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List deploys"
+        },
+        {
+          "info": {
+            "name": "Create deploy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/deploys",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create deploy"
+        },
+        {
+          "info": {
+            "name": "Show deploy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/deploys/:deploy_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "deploy_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show deploy"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List groups across all projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/groups"
+          },
+          "docs": "List groups across all projects"
+        },
+        {
+          "info": {
+            "name": "List groups for project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List groups for project"
+        },
+        {
+          "info": {
+            "name": "Show group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show group"
+        },
+        {
+          "info": {
+            "name": "Delete group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete group"
+        },
+        {
+          "info": {
+            "name": "Mute group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/muted",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mute group"
+        },
+        {
+          "info": {
+            "name": "Unmute group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/unmuted",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unmute group"
+        },
+        {
+          "info": {
+            "name": "Group statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Group statistics"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Notices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create notice (error occurrence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v3/projects/:project_id/notices",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create notice (error occurrence)"
+        },
+        {
+          "info": {
+            "name": "List notices in group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/notices",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List notices in group"
+        },
+        {
+          "info": {
+            "name": "Show notice status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/notice-status/:notice_uuid",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "notice_uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show notice status"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Source Maps",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List source maps",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/sourcemaps",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List source maps"
+        },
+        {
+          "info": {
+            "name": "Create source map",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/sourcemaps",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create source map"
+        },
+        {
+          "info": {
+            "name": "Show source map",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/sourcemaps/:source_map_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "source_map_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show source map"
+        },
+        {
+          "info": {
+            "name": "Delete source map",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/sourcemaps/:source_map_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "source_map_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete source map"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Performance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit route performance stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/routes-stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit route performance stats"
+        },
+        {
+          "info": {
+            "name": "Submit routes breakdown",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/routes-breakdowns",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit routes breakdown"
+        },
+        {
+          "info": {
+            "name": "Submit database query stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/queries-stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit database query stats"
+        },
+        {
+          "info": {
+            "name": "Submit queue stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/queues-stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit queue stats"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List project activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/activities",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List project activities"
+        },
+        {
+          "info": {
+            "name": "Project statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Project statistics"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "iOS Crash Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create iOS crash report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v3/projects/:project_id/ios-reports",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create iOS crash report"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
