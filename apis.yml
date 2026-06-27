@@ -54,7 +54,7 @@ common:
     url: https://docs.airbrake.io
   - type: Pricing
     url: https://www.airbrake.io/pricing
-  - type: SignUp
+  - type: Signup
     url: https://airbrake.io/account/new
 maintainers:
   - FN: Kin Lane
