@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/airbrake-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: ProjectKey
+  type: apiKey
+  in: query
+  parameter: key
+  description: Project key, user key, or user token passed as the `key` query string parameter.
+  sources:
+  - openapi/airbrake-openapi.yml

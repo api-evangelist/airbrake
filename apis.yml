@@ -44,6 +44,10 @@ apis:
         url: https://docs.airbrake.io/docs/devops-tools/api/
 
 common:
+  - type: DomainSecurity
+    url: security/airbrake-domain-security.yml
+  - type: Authentication
+    url: authentication/airbrake-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/airbrake
   - type: LinkedIn
