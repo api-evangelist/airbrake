@@ -44,6 +44,8 @@ apis:
         url: https://docs.airbrake.io/docs/devops-tools/api/
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/airbrake-agentic-access.yml
   - type: DomainSecurity
     url: security/airbrake-domain-security.yml
   - type: Authentication
