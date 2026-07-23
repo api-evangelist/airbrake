@@ -1,0 +1,84 @@
+openapi: 3.1.0
+info:
+  title: Airbrake REST Activities Deploys API
+  version: v4
+  description: 'Best-effort OpenAPI 3.1 representation of the Airbrake REST API derived from
+
+    https://docs.airbrake.io/docs/devops-tools/api/. Airbrake is an error
+
+    monitoring and APM platform exposing endpoints for projects, deploys,
+
+    groups (errors), notices, source maps, performance routes/queries/queues
+
+    statistics, and project activities. Authentication uses query-string keys
+
+    (project key, user key, or user token).
+
+    '
+  contact:
+    name: Airbrake
+    url: https://docs.airbrake.io/docs/devops-tools/api/
+servers:
+- url: https://api.airbrake.io
+  description: Airbrake API
+security:
+- ProjectKey: []
+tags:
+- name: Deploys
+paths:
+  /api/v4/projects/{project_id}/deploys:
+    get:
+      tags:
+      - Deploys
+      summary: List deploys
+      operationId: listDeploys
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Deploys
+      summary: Create deploy
+      operationId: createDeploy
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: Created
+  /api/v4/projects/{project_id}/deploys/{deploy_id}:
+    get:
+      tags:
+      - Deploys
+      summary: Show deploy
+      operationId: showDeploy
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: deploy_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ProjectKey:
+      type: apiKey
+      in: query
+      name: key
+      description: Project key, user key, or user token passed as the `key` query string parameter.

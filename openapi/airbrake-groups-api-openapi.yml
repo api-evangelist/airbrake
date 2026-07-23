@@ -1,0 +1,158 @@
+openapi: 3.1.0
+info:
+  title: Airbrake REST Activities Groups API
+  version: v4
+  description: 'Best-effort OpenAPI 3.1 representation of the Airbrake REST API derived from
+
+    https://docs.airbrake.io/docs/devops-tools/api/. Airbrake is an error
+
+    monitoring and APM platform exposing endpoints for projects, deploys,
+
+    groups (errors), notices, source maps, performance routes/queries/queues
+
+    statistics, and project activities. Authentication uses query-string keys
+
+    (project key, user key, or user token).
+
+    '
+  contact:
+    name: Airbrake
+    url: https://docs.airbrake.io/docs/devops-tools/api/
+servers:
+- url: https://api.airbrake.io
+  description: Airbrake API
+security:
+- ProjectKey: []
+tags:
+- name: Groups
+paths:
+  /api/v4/groups:
+    get:
+      tags:
+      - Groups
+      summary: List groups across all projects
+      operationId: listAllGroups
+      responses:
+        '200':
+          description: OK
+  /api/v4/projects/{project_id}/groups:
+    get:
+      tags:
+      - Groups
+      summary: List groups for project
+      operationId: listGroups
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v4/projects/{project_id}/groups/{group_id}:
+    get:
+      tags:
+      - Groups
+      summary: Show group
+      operationId: showGroup
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: group_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Groups
+      summary: Delete group
+      operationId: deleteGroup
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: group_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: Deleted
+  /api/v4/projects/{project_id}/groups/{group_id}/muted:
+    put:
+      tags:
+      - Groups
+      summary: Mute group
+      operationId: muteGroup
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: group_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v4/projects/{project_id}/groups/{group_id}/unmuted:
+    put:
+      tags:
+      - Groups
+      summary: Unmute group
+      operationId: unmuteGroup
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: group_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v4/projects/{project_id}/groups/{group_id}/stats:
+    get:
+      tags:
+      - Groups
+      summary: Group statistics
+      operationId: groupStats
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: group_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ProjectKey:
+      type: apiKey
+      in: query
+      name: key
+      description: Project key, user key, or user token passed as the `key` query string parameter.

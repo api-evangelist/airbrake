@@ -1,0 +1,95 @@
+openapi: 3.1.0
+info:
+  title: Airbrake REST Activities Performance API
+  version: v4
+  description: 'Best-effort OpenAPI 3.1 representation of the Airbrake REST API derived from
+
+    https://docs.airbrake.io/docs/devops-tools/api/. Airbrake is an error
+
+    monitoring and APM platform exposing endpoints for projects, deploys,
+
+    groups (errors), notices, source maps, performance routes/queries/queues
+
+    statistics, and project activities. Authentication uses query-string keys
+
+    (project key, user key, or user token).
+
+    '
+  contact:
+    name: Airbrake
+    url: https://docs.airbrake.io/docs/devops-tools/api/
+servers:
+- url: https://api.airbrake.io
+  description: Airbrake API
+security:
+- ProjectKey: []
+tags:
+- name: Performance
+paths:
+  /api/v5/projects/{project_id}/routes-stats:
+    put:
+      tags:
+      - Performance
+      summary: Submit route performance stats
+      operationId: putRoutesStats
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v5/projects/{project_id}/routes-breakdowns:
+    put:
+      tags:
+      - Performance
+      summary: Submit routes breakdown
+      operationId: putRoutesBreakdowns
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v5/projects/{project_id}/queries-stats:
+    put:
+      tags:
+      - Performance
+      summary: Submit database query stats
+      operationId: putQueriesStats
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+  /api/v5/projects/{project_id}/queues-stats:
+    put:
+      tags:
+      - Performance
+      summary: Submit queue stats
+      operationId: putQueuesStats
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ProjectKey:
+      type: apiKey
+      in: query
+      name: key
+      description: Project key, user key, or user token passed as the `key` query string parameter.

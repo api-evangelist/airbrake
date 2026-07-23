@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: Airbrake REST Activities Source Maps API
+  version: v4
+  description: 'Best-effort OpenAPI 3.1 representation of the Airbrake REST API derived from
+
+    https://docs.airbrake.io/docs/devops-tools/api/. Airbrake is an error
+
+    monitoring and APM platform exposing endpoints for projects, deploys,
+
+    groups (errors), notices, source maps, performance routes/queries/queues
+
+    statistics, and project activities. Authentication uses query-string keys
+
+    (project key, user key, or user token).
+
+    '
+  contact:
+    name: Airbrake
+    url: https://docs.airbrake.io/docs/devops-tools/api/
+servers:
+- url: https://api.airbrake.io
+  description: Airbrake API
+security:
+- ProjectKey: []
+tags:
+- name: Source Maps
+paths:
+  /api/v4/projects/{project_id}/sourcemaps:
+    get:
+      tags:
+      - Source Maps
+      summary: List source maps
+      operationId: listSourceMaps
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Source Maps
+      summary: Create source map
+      operationId: createSourceMap
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: Created
+  /api/v4/projects/{project_id}/sourcemaps/{source_map_id}:
+    get:
+      tags:
+      - Source Maps
+      summary: Show source map
+      operationId: showSourceMap
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: source_map_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Source Maps
+      summary: Delete source map
+      operationId: deleteSourceMap
+      parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: source_map_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    ProjectKey:
+      type: apiKey
+      in: query
+      name: key
+      description: Project key, user key, or user token passed as the `key` query string parameter.
