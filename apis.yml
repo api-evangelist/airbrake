@@ -10,7 +10,19 @@ description: >-
   API exposes error notices, projects, deployments, and groups using query
   parameter API keys.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airbrake.png
 tags:
   - Error Monitoring
   - Application Performance Monitoring
@@ -24,25 +36,113 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: airbrake:api
-    name: Airbrake API
-    description: >-
-      REST API for submitting error notices, managing projects, tracking
-      deployments, querying notices and groups, and uploading source maps.
-      Authentication uses project keys, user keys, or time-limited user tokens
-      passed as a query parameter.
-    humanURL: https://docs.airbrake.io/docs/devops-tools/api/
-    baseURL: https://api.airbrake.io/api/v4
-    tags:
-      - Errors
-      - Notices
-      - Deployments
-      - Projects
-      - Source Maps
-    properties:
-      - type: Documentation
-        url: https://docs.airbrake.io/docs/devops-tools/api/
-
+- aid: airbrake:api
+  name: Airbrake API
+  description: >-
+    REST API for submitting error notices, managing projects, tracking deployments, querying notices and
+    groups, and uploading source maps. Authentication uses project keys, user keys, or time-limited user
+    tokens passed as a query parameter.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Errors
+  - Notices
+  - Deployments
+  - Projects
+  - Source Maps
+  properties:
+  - type: Documentation
+    url: https://docs.airbrake.io/docs/devops-tools/api/
+- aid: airbrake:airbrake-activities-api
+  name: Airbrake Activities API
+  description: The Activities API from Airbrake — 2 operation(s) for activities.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Activities
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-activities-api-openapi.yml
+- aid: airbrake:airbrake-deploys-api
+  name: Airbrake Deploys API
+  description: The Deploys API from Airbrake — 2 operation(s) for deploys.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Deploys
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-deploys-api-openapi.yml
+- aid: airbrake:airbrake-groups-api
+  name: Airbrake Groups API
+  description: The Groups API from Airbrake — 6 operation(s) for groups.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-groups-api-openapi.yml
+- aid: airbrake:airbrake-ios-crash-reports-api
+  name: Airbrake iOS Crash Reports API
+  description: The iOS Crash Reports API from Airbrake — 1 operation(s) for ios crash reports.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - iOS Crash Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-ios-crash-reports-api-openapi.yml
+- aid: airbrake:airbrake-notices-api
+  name: Airbrake Notices API
+  description: The Notices API from Airbrake — 3 operation(s) for notices.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Notices
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-notices-api-openapi.yml
+- aid: airbrake:airbrake-performance-api
+  name: Airbrake Performance API
+  description: The Performance API from Airbrake — 4 operation(s) for performance.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Performance
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-performance-api-openapi.yml
+- aid: airbrake:airbrake-projects-api
+  name: Airbrake Projects API
+  description: The Projects API from Airbrake — 2 operation(s) for projects.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-projects-api-openapi.yml
+- aid: airbrake:airbrake-sessions-api
+  name: Airbrake Sessions API
+  description: The Sessions API from Airbrake — 1 operation(s) for sessions.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Sessions
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-sessions-api-openapi.yml
+- aid: airbrake:airbrake-source-maps-api
+  name: Airbrake Source Maps API
+  description: The Source Maps API from Airbrake — 2 operation(s) for source maps.
+  humanURL: https://docs.airbrake.io/docs/devops-tools/api/
+  baseURL: https://api.airbrake.io/api/v4
+  tags:
+  - Source Maps
+  properties:
+  - type: OpenAPI
+    url: openapi/airbrake-source-maps-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/airbrake-agentic-access.yml
