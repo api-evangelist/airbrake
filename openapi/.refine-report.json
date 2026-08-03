@@ -1,0 +1,30 @@
+{
+  "provider": "airbrake",
+  "sources": [
+    "airbrake-activities-api-openapi.yml",
+    "airbrake-deploys-api-openapi.yml",
+    "airbrake-groups-api-openapi.yml",
+    "airbrake-ios-crash-reports-api-openapi.yml",
+    "airbrake-notices-api-openapi.yml",
+    "airbrake-performance-api-openapi.yml",
+    "airbrake-projects-api-openapi.yml",
+    "airbrake-sessions-api-openapi.yml",
+    "airbrake-source-maps-api-openapi.yml"
+  ],
+  "outputs": [
+    "airbrake-activities-api-openapi.yml",
+    "airbrake-deploys-api-openapi.yml",
+    "airbrake-groups-api-openapi.yml",
+    "airbrake-ios-crash-reports-api-openapi.yml",
+    "airbrake-notices-api-openapi.yml",
+    "airbrake-performance-api-openapi.yml",
+    "airbrake-projects-api-openapi.yml",
+    "airbrake-sessions-api-openapi.yml",
+    "airbrake-source-maps-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
