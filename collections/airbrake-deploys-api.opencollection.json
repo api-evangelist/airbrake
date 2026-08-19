@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbrake REST Activities Deploys API",
+    "version": "v4"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Deploys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List deploys",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/deploys",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List deploys"
+        },
+        {
+          "info": {
+            "name": "Create deploy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/deploys",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create deploy"
+        },
+        {
+          "info": {
+            "name": "Show deploy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/deploys/:deploy_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "deploy_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show deploy"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

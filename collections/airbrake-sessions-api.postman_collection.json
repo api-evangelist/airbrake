@@ -1,0 +1,113 @@
+{
+  "item": [
+    {
+      "id": "7ca23332-1508-4fb9-b601-d4b8f67661a2",
+      "name": "Sessions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2222f5b3-6ed4-4629-8b19-2e5b6ca3fc8a",
+          "name": "Create user token (login)",
+          "request": {
+            "name": "Create user token (login)",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v4",
+                "sessions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "111e7d9f-00da-4d30-bf01-b6f49e905886",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v4",
+                    "sessions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.airbrake.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1dd44f78-168c-469b-b38a-c9466e1607e1",
+    "name": "Airbrake REST Activities Sessions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 representation of the Airbrake REST API derived from\nhttps://docs.airbrake.io/docs/devops-tools/api/. Airbrake is an error\nmonitoring and APM platform exposing endpoints for projects, deploys,\ngroups (errors), notices, source maps, performance routes/queries/queues\nstatistics, and project activities. Authentication uses query-string keys\n(project key, user key, or user token).\n\n\nContact Support:\n Name: Airbrake",
+      "type": "text/plain"
+    }
+  }
+}

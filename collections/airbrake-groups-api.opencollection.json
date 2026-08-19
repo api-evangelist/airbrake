@@ -1,0 +1,170 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbrake REST Activities Groups API",
+    "version": "v4"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List groups across all projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/groups"
+          },
+          "docs": "List groups across all projects"
+        },
+        {
+          "info": {
+            "name": "List groups for project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List groups for project"
+        },
+        {
+          "info": {
+            "name": "Show group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show group"
+        },
+        {
+          "info": {
+            "name": "Delete group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete group"
+        },
+        {
+          "info": {
+            "name": "Mute group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/muted",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mute group"
+        },
+        {
+          "info": {
+            "name": "Unmute group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/unmuted",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unmute group"
+        },
+        {
+          "info": {
+            "name": "Group statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Group statistics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

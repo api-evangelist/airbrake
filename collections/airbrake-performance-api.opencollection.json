@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbrake REST Activities Performance API",
+    "version": "v4"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Performance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit route performance stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/routes-stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit route performance stats"
+        },
+        {
+          "info": {
+            "name": "Submit routes breakdown",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/routes-breakdowns",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit routes breakdown"
+        },
+        {
+          "info": {
+            "name": "Submit database query stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/queries-stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit database query stats"
+        },
+        {
+          "info": {
+            "name": "Submit queue stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.airbrake.io/api/v5/projects/:project_id/queues-stats",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit queue stats"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbrake REST Activities Sessions API",
+    "version": "v4"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sessions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create user token (login)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v4/sessions"
+          },
+          "docs": "Create user token (login)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

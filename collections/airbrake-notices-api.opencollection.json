@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbrake REST Activities Notices API",
+    "version": "v4"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Notices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create notice (error occurrence)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.airbrake.io/api/v3/projects/:project_id/notices",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create notice (error occurrence)"
+        },
+        {
+          "info": {
+            "name": "List notices in group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/groups/:group_id/notices",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List notices in group"
+        },
+        {
+          "info": {
+            "name": "Show notice status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.airbrake.io/api/v4/projects/:project_id/notice-status/:notice_uuid",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "notice_uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Show notice status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
