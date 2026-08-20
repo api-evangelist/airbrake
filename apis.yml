@@ -47,6 +47,12 @@ apis:
   tags:
   - Errors
   - Notices
+  - Deployment
+  - Project
+  - Source Maps
+  tags_raw:
+  - Errors
+  - Notices
   - Deployments
   - Projects
   - Source Maps
@@ -79,6 +85,8 @@ apis:
   humanURL: https://docs.airbrake.io/docs/devops-tools/api/
   baseURL: https://api.airbrake.io/api/v4
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -119,6 +127,8 @@ apis:
   humanURL: https://docs.airbrake.io/docs/devops-tools/api/
   baseURL: https://api.airbrake.io/api/v4
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
