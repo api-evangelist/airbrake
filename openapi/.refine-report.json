@@ -1,30 +1,36 @@
 {
   "provider": "airbrake",
   "sources": [
-    "airbrake-activities-api-openapi.yml",
-    "airbrake-deploys-api-openapi.yml",
-    "airbrake-groups-api-openapi.yml",
-    "airbrake-ios-crash-reports-api-openapi.yml",
-    "airbrake-notices-api-openapi.yml",
-    "airbrake-performance-api-openapi.yml",
-    "airbrake-projects-api-openapi.yml",
-    "airbrake-sessions-api-openapi.yml",
-    "airbrake-source-maps-api-openapi.yml"
+    "_original/airbrake-openapi.yml"
   ],
   "outputs": [
     "airbrake-activities-api-openapi.yml",
     "airbrake-deploys-api-openapi.yml",
     "airbrake-groups-api-openapi.yml",
-    "airbrake-ios-crash-reports-api-openapi.yml",
     "airbrake-notices-api-openapi.yml",
     "airbrake-performance-api-openapi.yml",
     "airbrake-projects-api-openapi.yml",
     "airbrake-sessions-api-openapi.yml",
-    "airbrake-source-maps-api-openapi.yml"
+    "airbrake-source-maps-api-openapi.yml",
+    "airbrake-ios-crash-reports-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "airbrake-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "airbrake-activities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-deploys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-ios-crash-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-notices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-performance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-sessions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airbrake-source-maps-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

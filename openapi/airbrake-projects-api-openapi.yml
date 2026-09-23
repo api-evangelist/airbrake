@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Airbrake REST Activities Projects API
+  title: Airbrake REST Projects API
   version: v4
   description: 'Best-effort OpenAPI 3.1 representation of the Airbrake REST API derived from
 
@@ -12,9 +12,7 @@ info:
 
     statistics, and project activities. Authentication uses query-string keys
 
-    (project key, user key, or user token).
-
-    '
+    (project key, user key, or user token).'
   contact:
     name: Airbrake
     url: https://docs.airbrake.io/docs/devops-tools/api/
