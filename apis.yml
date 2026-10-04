@@ -167,6 +167,9 @@ apis:
   - type: OpenAPI
     url: openapi/airbrake-source-maps-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/airbrake-capability-edges.yml
+    name: Airbrake Business Capability Map
   - type: AgenticAccess
     url: agentic-access/airbrake-agentic-access.yml
   - type: DomainSecurity
