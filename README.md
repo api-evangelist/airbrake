@@ -1,4 +1,4 @@
-# Airbrake (airbrake)
+# Airbrake
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,59 +66,115 @@
 
 Airbrake is an error monitoring and application performance management platform that captures exceptions, deployments, and performance traces across web, mobile, and backend applications using language-specific notifier libraries. The platform aggregates errors with smart grouping, routing alerts to engineering teams, and provides deploy tracking and source map management for stack trace deminification. The Airbrake REST API exposes error notices, projects, deployments, and groups using query parameter API keys.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/airbrake/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/airbrake/refs/heads/main/apis.yml)
+**Areas:** Error Monitoring · Application Performance Monitoring · Observability · DevOps · Logging · Exception Tracking
 
-## Scope
+## Airbrake on APIs.io
 
-- **Type:** Index
+Everything profiled for Airbrake is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/airbrake/](https://apis.io/providers/airbrake/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (10)
 
-- Error Monitoring
-- Application Performance Monitoring
-- Observability
-- DevOps
-- Logging
-- Exception Tracking
+- [Airbrake API](https://apis.io/apis/airbrake/api/) — REST API for submitting error notices, managing projects, tracking deployments, querying notices and groups, and uploading source maps. Authentication uses…
+- [Airbrake Activities API](https://apis.io/apis/airbrake/airbrake-activities-api/) — The Activities API from Airbrake — 2 operation(s) for activities.
+- [Airbrake Deploys API](https://apis.io/apis/airbrake/airbrake-deploys-api/) — The Deploys API from Airbrake — 2 operation(s) for deploys.
+- [Airbrake Groups API](https://apis.io/apis/airbrake/airbrake-groups-api/) — The Groups API from Airbrake — 6 operation(s) for groups.
+- [Airbrake iOS Crash Reports API](https://apis.io/apis/airbrake/airbrake-ios-crash-reports-api/) — The iOS Crash Reports API from Airbrake — 1 operation(s) for ios crash reports.
+- [Airbrake Notices API](https://apis.io/apis/airbrake/airbrake-notices-api/) — The Notices API from Airbrake — 3 operation(s) for notices.
+- [Airbrake Performance API](https://apis.io/apis/airbrake/airbrake-performance-api/) — The Performance API from Airbrake — 4 operation(s) for performance.
+- [Airbrake Projects API](https://apis.io/apis/airbrake/airbrake-projects-api/) — The Projects API from Airbrake — 2 operation(s) for projects.
+- [Airbrake Sessions API](https://apis.io/apis/airbrake/airbrake-sessions-api/) — The Sessions API from Airbrake — 1 operation(s) for sessions.
+- [Airbrake Source Maps API](https://apis.io/apis/airbrake/airbrake-source-maps-api/) — The Source Maps API from Airbrake — 2 operation(s) for source maps.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Airbrake API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for submitting error notices, managing projects, tracking deployments, querying notices and groups, and uploading source maps. Authentication uses project keys, user keys, or time-limited user tokens passed as a query parameter.
+- [Airbrake Agentic Access](https://apis.io/agentic-access/airbrake/airbrake-agentic-access/)
 
-- **Human URL:** [https://docs.airbrake.io/docs/devops-tools/api/](https://docs.airbrake.io/docs/devops-tools/api/)
-- **Base URL:** `https://api.airbrake.io/api/v4`
+#### Collections (10)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Errors
-- Notices
-- Deployments
-- Projects
-- Source Maps
+- [Airbrake REST API](https://apis.io/collections/airbrake/open-airbrake/)
+- [Airbrake REST Activities API](https://apis.io/collections/airbrake/open-airbrake-activities-api/)
+- [Airbrake REST Activities Deploys API](https://apis.io/collections/airbrake/open-airbrake-deploys-api/)
+- [Airbrake REST Activities Groups API](https://apis.io/collections/airbrake/open-airbrake-groups-api/)
+- [Airbrake REST Activities iOS Crash Reports API](https://apis.io/collections/airbrake/open-airbrake-ios-crash-reports-api/)
+- [Airbrake REST Activities Notices API](https://apis.io/collections/airbrake/open-airbrake-notices-api/)
+- [Airbrake REST Activities Performance API](https://apis.io/collections/airbrake/open-airbrake-performance-api/)
+- [Airbrake REST Activities Projects API](https://apis.io/collections/airbrake/open-airbrake-projects-api/)
+- [Airbrake REST Activities Sessions API](https://apis.io/collections/airbrake/open-airbrake-sessions-api/)
+- [Airbrake REST Activities Source Maps API](https://apis.io/collections/airbrake/open-airbrake-source-maps-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://docs.airbrake.io/docs/devops-tools/api/)
-- [Postman Collection](collections/airbrake.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airbrake.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Airbrake Authentication](https://apis.io/security/airbrake/airbrake-authentication/)
+- [Airbrake Domain Security](https://apis.io/security/airbrake/airbrake-domain-security/)
 
-- [GitHub Organization](https://github.com/airbrake)
-- [LinkedIn](https://www.linkedin.com/company/airbrake-io)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.airbrake.io)
 - [Documentation](https://docs.airbrake.io)
 - [Pricing](https://www.airbrake.io/pricing)
-- [Sign Up](https://airbrake.io/account/new)
+- [GitHub](https://github.com/airbrake)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 25.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 43.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 23.7 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/airbrake/](https://apis.io/providers/airbrake/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Airbrake: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/airbrake/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
